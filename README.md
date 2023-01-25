@@ -84,17 +84,17 @@ Create a table that breaks down school performance based on average spending ran
 
 Use the code provided below to create four bins with reasonable cutoff values to group school spending.
 
-spending_bins = [0, 585, 630, 645, 680]
-labels = ["<$585", "$585-630", "$630-645", "$645-680"]
+
+<img width="715" alt="Captura de pantalla 2023-01-24 a la(s) 20 38 51" src="https://user-images.githubusercontent.com/120423303/214468489-26df2cfe-8d40-4983-8cb8-16bef67936d1.png">
+
 Use pd.cut to categorize spending based on the bins.
 
 Use the following code to then calculate mean scores per spending range.
 
-spending_math_scores = school_spending_df.groupby(["Spending Ranges (Per Student)"]).mean()["Average Math Score"]
-spending_reading_scores = school_spending_df.groupby(["Spending Ranges (Per Student)"]).mean()["Average Reading Score"]
-spending_passing_math = school_spending_df.groupby(["Spending Ranges (Per Student)"]).mean()["% Passing Math"]
-spending_passing_reading = school_spending_df.groupby(["Spending Ranges (Per Student)"]).mean()["% Passing Reading"]
-overall_passing_spending = school_spending_df.groupby(["Spending Ranges (Per Student)"]).mean()["% Overall Passing"]
+
+<img width="710" alt="image" src="https://user-images.githubusercontent.com/120423303/214468693-1f2d95f2-c146-4c15-8a9f-b9a390ff0812.png">
+
+
 Use the scores above to create a DataFrame called spending_summary.
 
 Include the following metrics in the table:
@@ -114,8 +114,10 @@ Include the following metrics in the table:
 ## Scores by School Size
 Use the following code to bin the per_school_summary.
 
-size_bins = [0, 1000, 2000, 5000]
-labels = ["Small (<1000)", "Medium (1000-2000)", "Large (2000-5000)"]
+
+<img width="710" alt="image" src="https://user-images.githubusercontent.com/120423303/214468744-2e49ab7f-9418-412c-8df9-6c460f775b02.png">
+
+
 Use pd.cut on the "Total Students" column of the per_school_summary DataFrame.
 
 Create a DataFrame called size_summary that breaks down school performance based on school size (small, medium, or large).
